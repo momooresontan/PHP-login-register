@@ -21,6 +21,15 @@
                     if(empty($fullname) OR empty($email) OR empty($password) OR empty($passwordConfirm)){
                         array_push($errors, "All field are required!");
                     }
+                    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                        array_push($errors, "Invalid email address!");
+                    }
+                    if(strlen($password) < 8){
+                        array_push($errors, "Password must be at least 8 characters long!");
+                    }
+                    if($password !== $passwordConfirm){
+                        array_push($errors, "Password does not match!");
+                    }
                 }
             ?>
 
