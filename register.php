@@ -11,6 +11,19 @@
 <body>
     <div class="container">
         <form action="register.php" method="POST">
+            <?php
+                if(isset($_POST["submit"])){
+                    $fullname = $_POST["fullname"];
+                    $email = $_POST["email"];
+                    $password = $_POST["password"];
+                    $passwordConfirm = $_POST["confirm_password"];
+                    $errors = array();
+                    if(empty($fullname) OR empty($email) OR empty($password) OR empty($passwordConfirm)){
+                        array_push($errors, "All field are required!");
+                    }
+                }
+            ?>
+
             <div class="form-group">
                 <input type="text" class="form-control" name="fullname" placeholder="Full Name: ">
             </div>
