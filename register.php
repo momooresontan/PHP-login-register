@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="container">
-        <form action="register.php" method="POST">
             <?php
                 if(isset($_POST["submit"])){
                     $fullname = $_POST["fullname"];
@@ -60,7 +59,7 @@
                     }
                 }
             ?>
-
+        <form action="register.php" method="POST">
             <div class="form-group">
                 <input type="text" class="form-control" name="fullname" placeholder="Full Name: ">
             </div>

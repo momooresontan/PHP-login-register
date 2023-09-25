@@ -10,15 +10,20 @@
 </head>
 <body>
     <div class="container">
+        <?php 
+            if(isset($_POST["login"])){
+
+            }
+        ?>
         <form action="login.php" method="post">
             <div class="form-group">
-                <input type="email" name="email" placeholder="Email Address: ">
+                <input type="email" class="form-control" name="email" placeholder="Email Address: ">
             </div>
             <div class="form-group">
-                <input type="password" name="password" placeholder="Password: ">
+                <input type="password" class="form-control" name="password" placeholder="Password: ">
             </div>
             <div class="form-btn">
-                
+                 <input type="submit" value="Login" class="btn btn-primary" name="login">
             </div>
         </form>
     </div>
