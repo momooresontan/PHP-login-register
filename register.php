@@ -30,6 +30,13 @@
                     if($password !== $passwordConfirm){
                         array_push($errors, "Password does not match!");
                     }
+                    if(count($errors) > 0 ){
+                        foreach($errors as $error){
+                            echo "<div class='alert alert-danger'>$error</div>";
+                        }
+                    } else{
+                        //we will insert data into db
+                    }
                 }
             ?>
 
