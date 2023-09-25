@@ -38,7 +38,8 @@
                             echo "<div class='alert alert-danger'>$error</div>";
                         }
                     } else{
-                        require_once
+                        require_once "database.php";
+                        $sql = "INSERT INTO users (full_name, email, password) VALUES (?, ?, ?)";
                     }
                 }
             ?>
