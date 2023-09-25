@@ -1,6 +1,8 @@
 <?php
     session_start();
-    print_r($_SESSION);
+    if(!isset($_SESSION["user"])){
+        header("Location: login.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +18,7 @@
 <body>
     <div class="container">
         <h1>Welcome HOME</h1>
+        <a href="logout.php" class="btn btn-warning">Logout</a>
     </div>
 </body>
 </html>
