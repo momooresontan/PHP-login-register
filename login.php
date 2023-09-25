@@ -49,6 +49,9 @@
                  <input type="submit" value="Login" class="btn btn-primary" name="login">
             </div>
         </form>
+        <div>
+            <p>Not registered yet? <a href="register.php"> Register here</a></p>
+        </div>
     </div>
 </body>
 </html>
