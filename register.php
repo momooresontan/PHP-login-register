@@ -17,6 +17,9 @@
                     $email = $_POST["email"];
                     $password = $_POST["password"];
                     $passwordConfirm = $_POST["confirm_password"];
+
+                    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
                     $errors = array();
                     if(empty($fullname) OR empty($email) OR empty($password) OR empty($passwordConfirm)){
                         array_push($errors, "All field are required!");
@@ -35,7 +38,7 @@
                             echo "<div class='alert alert-danger'>$error</div>";
                         }
                     } else{
-                        //we will insert data into db
+                        require_once
                     }
                 }
             ?>
